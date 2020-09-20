@@ -1,0 +1,15 @@
+{
+  "name": "dlunchmod",
+  "version": "0.1.0",
+  "factorio_version": "1.0",
+  "title": "dlunch's personal mod",
+  "author": "dlunch",
+  "description": "",
+  "dependencies": [
+    "base",
+    "angelsrefining",
+    "angelsindustries",
+    "omnimatter",
+    "RealisticReactors"
+  ]
+}
