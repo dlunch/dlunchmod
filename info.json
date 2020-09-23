@@ -7,7 +7,7 @@
   "description": "",
   "dependencies": [
     "base",
-    "AngelBobExtended",
+    "? AngelBobExtended",
     "angelsrefining",
     "angelsindustries",
     "omnimatter",
