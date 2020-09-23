@@ -7,12 +7,12 @@
   "description": "",
   "dependencies": [
     "base",
-    "angelsrefining",
-    "angelsindustries",
-    "omnimatter",
-    "omnimatter_energy",
-    "RealisticReactors",
-    "ScienceCostTweakerM",
-    "? AngelBobExtended"
+    "? AngelBobExtended",
+    "? angelsrefining",
+    "? angelsindustries",
+    "? omnimatter",
+    "? omnimatter_energy",
+    "? RealisticReactors",
+    "? ScienceCostTweakerM"
   ]
 }
