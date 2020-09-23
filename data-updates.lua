@@ -10,7 +10,7 @@ end
 angelsmods.functions.make_void("omnic-waste", "water")
 
 -- RealisticReactor compatibility for angel
-remove_tech_prerequisite("nuclear-power", "effectivity-module-2")
+remove_tech_prerequisite("landfill", "nuclear-power")
 
 -- add omnite to rubyte, bobomnium recipes
 -- run only if angel's industries overhaul enabled
