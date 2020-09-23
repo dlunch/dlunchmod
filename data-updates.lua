@@ -1,10 +1,4 @@
-function remove_tech_prerequisite(tech_name, prerequisite)
-  for i, name in pairs(data.raw.technology[tech_name].prerequisites) do
-    if name == prerequisite then
-      table.remove(data.raw.technology[tech_name].prerequisites, i)
-    end
-  end
-end
+require('./lib.lua')
 
 -- add omnic waste disposal recipe on clarifier
 angelsmods.functions.make_void("omnic-waste", "water")
