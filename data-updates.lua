@@ -10,7 +10,7 @@ remove_tech_prerequisite("landfill", "nuclear-power")
 
 -- add omnite to rubyte, bobomnium recipes
 -- run only if angel's industries overhaul enabled
-if angelsmods.industries.tech and data.raw.item['omnite'] then
+if angelsmod ~= nil and angelsmods.industries.tech and data.raw.item['omnite'] then
   -- copied from omnimatter/prototypes/omniore.lua
   local initial_recipes = {}
   local inputs = {}
