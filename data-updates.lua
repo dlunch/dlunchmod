@@ -1,16 +1,19 @@
-require('./lib.lua')
+require("./lib.lua")
 
 -- add omnic waste disposal recipe on clarifier
-if data.raw.item['omnite'] then
+if data.raw.item["omnite"] then
   angelsmods.functions.make_void("omnic-waste", "water")
 end
 
 -- RealisticReactor compatibility for angel
 remove_tech_prerequisite("landfill", "nuclear-power")
 
+-- Ribbon Maze + SCTM
+remove_tech_prerequisite("water-washing-2", "landfill")
+
 -- add omnite to rubyte, bobomnium recipes
--- run only if angel's industries overhaul enabled
-if angelsmod ~= nil and angelsmods.industries.tech and data.raw.item['omnite'] then
+-- run only if angel"s industries overhaul enabled
+if angelsmod ~= nil and angelsmods.industries.tech and data.raw.item["omnite"] then
   -- copied from omnimatter/prototypes/omniore.lua
   local initial_recipes = {}
   local inputs = {}

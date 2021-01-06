@@ -1,7 +1,7 @@
 require('./lib.lua')
 
 -- omnimatter + AngelBobExtended
-if data.raw.recipe["tech-component-red"] then
+if data.raw.recipe["tech-component-red"] and data.raw.item["omnite"] then
   replace_recipe_ingredient("tech-component-red", "coal", "omnite")
 end
 
