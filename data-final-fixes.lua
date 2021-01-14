@@ -1,5 +1,10 @@
 require('./lib.lua')
 
+-- ir2 + jetpack duplicate
+if data.raw.technology["jetpack-4"] then
+  remove_tech_prerequisite("jetpack-4", "ir2-modules-3")
+end
+
 -- omnimatter + AngelBobExtended
 if data.raw.recipe["tech-component-red"] and data.raw.item["omnite"] then
   replace_recipe_ingredient("tech-component-red", "coal", "omnite")
