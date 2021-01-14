@@ -9,7 +9,9 @@ end
 remove_tech_prerequisite("landfill", "nuclear-power")
 
 -- Ribbon Maze + SCTM
-remove_tech_prerequisite("water-washing-2", "landfill")
+if data.raw.technology["water-washing-2"] then
+  remove_tech_prerequisite("water-washing-2", "landfill")
+end
 
 -- add omnite to rubyte, bobomnium recipes
 -- run only if angel"s industries overhaul enabled
