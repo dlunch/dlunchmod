@@ -23,3 +23,34 @@ if data.raw.technology["sct-aai-basic-fuel-processing"] and not data.raw.technol
   data.raw.technology["sct-aai-rocket-fuel-processing"] = nil
   data.raw.technology["sct-aai-nuclear-fuel-processing"] = nil
 end
+
+-- kr2 + ir2
+if mods['Krastorio2'] and mods['IndustrialRevolution'] then
+	krastorio.technologies.removePrerequisite("light-armor", "military")
+	krastorio.technologies.addResearchUnitIngredient("light-armor", "automation-science-pack", 1)
+	krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("heavy-armor", "logistic-science-pack", 1)
+	krastorio.technologies.removeUnlockRecipe("logistics", "inserter")
+	krastorio.technologies.removeUnlockRecipe("logistics", "long-handed-inserter")
+
+	krastorio.technologies.removePrerequisite("light-armor", "military")
+	krastorio.technologies.addPrerequisite("ir2-steambot", "light-armor")
+	krastorio.technologies.addResearchUnitIngredient("light-armor", "automation-science-pack", 1)
+	krastorio.technologies.removeResearchUnitIngredient("light-armor", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("heavy-armor", "logistic-science-pack", 1)
+	krastorio.technologies.removePrerequisite("stone-wall", "military")
+
+	krastorio.technologies.addResearchUnitIngredient("fluid-handling", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluids-chemistry", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("oil-processing", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("plastics", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-containers", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-radar", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("logistic-2", "logistic-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("logistic-2", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-silicon-processing", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("kr-fluid-excess-handling", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("automobilism", "chemical-science-pack", 1)
+	krastorio.technologies.addResearchUnitIngredient("advanced-radar", "chemical-science-pack", 1)
+end
