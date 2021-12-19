@@ -44,3 +44,9 @@ if data.raw.technology["sct-aai-basic-fuel-processing"] and not data.raw.technol
   data.raw.technology["sct-aai-rocket-fuel-processing"] = nil
   data.raw.technology["sct-aai-nuclear-fuel-processing"] = nil
 end
+
+-- disable survelliance 2
+if data.raw.technology["surveillance-2"] then
+	data.raw.technology["surveillance-2"].hidden = true
+	data.raw.technology["surveillance-2"].enabled = false
+end
