@@ -50,3 +50,11 @@ if data.raw.technology["surveillance-2"] then
 	data.raw.technology["surveillance-2"].hidden = true
 	data.raw.technology["surveillance-2"].enabled = false
 end
+-- disable rampant arsenal nuclear locomotive if k2 loaded
+if data.raw.locomotive["nuclear-train-vehicle-rampant-arsenal"] and data.raw.locomotive["kr-nuclear-locomotive"] then
+  data.raw["recipe"]["kr-vc-nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw["recipe"]["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw["item-with-entity-data"]["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw.locomotive["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw.technology["rampant-arsenal-technology-nuclear-railway"] = nil
+end
