@@ -62,3 +62,11 @@ if mods["Krastorio2"] and mods["RampantArsenal"] then
   -- disable rampant arsenal power armor mk3 if k2 loaded
   data.raw.technology["rampant-arsenal-technology-power-armor-mk3"] = nil
 end
+
+if mods["Krastorio2"] and mods["RealisticFusionPower"] then
+  -- remove duplicate electrolyser
+  data.raw["item"]["rfp-electrolyser"] = nil
+  data.raw["assembling-machine"]["rfp-electrolyser"] = nil
+  data.raw["recipe"]["rfp-electrolyser"] = nil
+  data.raw["recipe"]["kr-vc-rfp-electrolyser"] = nil
+end
