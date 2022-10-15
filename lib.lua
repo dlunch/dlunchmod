@@ -1,4 +1,7 @@
 function remove_tech_prerequisite(tech_name, prerequisite)
+  if not data.raw.technology[tech_name] or not data.raw.technology[tech_name].prerequisites then
+    return
+  end
   for i, name in ipairs(data.raw.technology[tech_name].prerequisites) do
     if name == prerequisite then
       table.remove(data.raw.technology[tech_name].prerequisites, i)
