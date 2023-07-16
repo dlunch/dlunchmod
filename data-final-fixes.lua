@@ -70,3 +70,21 @@ if mods["Krastorio2"] and mods["RealisticFusionPower"] then
   data.raw["recipe"]["rfp-electrolyser"] = nil
   data.raw["recipe"]["kr-vc-rfp-electrolyser"] = nil
 end
+
+
+if mods["Atomic_Overhaul"] and mods["RealisticFusionPower"] then
+  -- remove tritium output
+  for i, item in ipairs(data.raw.recipe["uranium-without-research-data"].results) do
+    if item["name"] == "tritium" then
+      table.remove(data.raw.recipe["uranium-without-research-data"].results, i)
+      break
+    end
+  end
+
+  for i, item in ipairs(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results) do
+    if item["name"] == "tritium" then
+      table.remove(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results, i)
+      break
+    end
+  end
+end
