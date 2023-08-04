@@ -73,11 +73,13 @@ end
 
 
 if mods["Atomic_Overhaul"] and mods["RealisticFusionPower"] then
-  -- remove tritium output
-  for i, item in ipairs(data.raw.recipe["uranium-without-research-data"].results) do
-    if item["name"] == "tritium" then
-      table.remove(data.raw.recipe["uranium-without-research-data"].results, i)
-      break
+  if mods["Krastorio2"] then
+    -- remove tritium output
+    for i, item in ipairs(data.raw.recipe["uranium-without-research-data"].results) do
+      if item["name"] == "tritium" then
+        table.remove(data.raw.recipe["uranium-without-research-data"].results, i)
+        break
+      end
     end
   end
 
