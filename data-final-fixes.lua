@@ -81,10 +81,12 @@ if mods["Atomic_Overhaul"] and mods["RealisticFusionPower"] then
     end
   end
 
-  for i, item in ipairs(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results) do
-    if item["name"] == "tritium" then
-      table.remove(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results, i)
-      break
+  if data.raw.recipe["ao-nuclear-fuel-reprocessing"] then
+    for i, item in ipairs(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results) do
+      if item["name"] == "tritium" then
+        table.remove(data.raw.recipe["ao-nuclear-fuel-reprocessing"].results, i)
+        break
+      end
     end
   end
 end
