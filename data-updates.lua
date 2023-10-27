@@ -61,3 +61,24 @@ if angelsmod ~= nil and angelsmods.industries.tech and data.raw.item["omnite"] t
     addSmallIcon(result[2].name, 3):extend()
   end
 end
+
+if mods["Krastorio2"] and mods["RealisticFusionPower"] then
+  -- remove duplicate electrolyser
+  data.raw["item"]["rfp-electrolyser"] = nil
+  data.raw["assembling-machine"]["rfp-electrolyser"] = nil
+  data.raw["recipe"]["rfp-electrolyser"] = nil
+  data.raw["recipe"]["kr-vc-rfp-electrolyser"] = nil
+end
+
+
+if mods["Krastorio2"] and mods["RampantArsenal"] then
+  -- disable rampant arsenal nuclear locomotive if k2 loaded
+  data.raw["recipe"]["kr-vc-nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw["recipe"]["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw["item-with-entity-data"]["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw.locomotive["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw.technology["rampant-arsenal-technology-nuclear-railway"] = nil
+
+  -- disable rampant arsenal power armor mk3 if k2 loaded
+  data.raw.technology["rampant-arsenal-technology-power-armor-mk3"] = nil
+end
