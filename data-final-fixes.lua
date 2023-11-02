@@ -71,3 +71,18 @@ if mods["Atomic_Overhaul"] and mods["RealisticFusionPower"] then
     end
   end
 end
+
+if mods["Atomic_Overhaul"] and mods["angelsindustries"] then
+  for _, lab in pairs(data.raw["lab"]) do
+    research_data_found = false
+    for i, input in pairs(lab.inputs) do
+      if input == "research-data" then
+        if research_data_found == true then
+          table.remove(lab.inputs, i)
+        else
+          research_data_found = true
+        end
+      end
+    end
+  end
+end
