@@ -68,6 +68,9 @@ if mods["Krastorio2"] and mods["RealisticFusionPower"] then
   data.raw["assembling-machine"]["rfp-electrolyser"] = nil
   data.raw["recipe"]["rfp-electrolyser"] = nil
   data.raw["recipe"]["kr-vc-rfp-electrolyser"] = nil
+  if mods["248k"] then
+      data.raw["recipe"]["gr_white_hole_cycle_rfp-electrolyser_recipe"] = nil
+  end
 end
 
 
