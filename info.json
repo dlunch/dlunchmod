@@ -1,7 +1,7 @@
 {
   "name": "dlunchmod",
   "version": "0.1.0",
-  "factorio_version": "1.1",
+  "factorio_version": "2.0",
   "title": "dlunch's personal mod",
   "author": "dlunch",
   "description": "",
@@ -20,6 +20,7 @@
     "? extendedangels",
     "? Krastorio2",
     "? RampantArsenal",
+    "? RampantArsenalFork",
     "? RealisticFusionPower",
     "? Atomic_Overhaul",
     "? 248k"
