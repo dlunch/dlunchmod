@@ -86,3 +86,7 @@ if mods["Atomic_Overhaul"] and mods["angelsindustries"] then
     end
   end
 end
+
+if mods["PowerOverload"] and mods["angelsindustries"] then 
+  data.raw["recipe"]["po-small-electric-fuse"]["subgroup"] = "angels-power-poles"
+end
