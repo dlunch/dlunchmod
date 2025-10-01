@@ -73,10 +73,11 @@ if mods["Krastorio2"] and mods["RealisticFusionPower"] then
   end
 end
 
-if mods["Krastorio2"] and (mods["RampantArsenal"] or mods["RampantArsenalFork"]) then
-  -- disable rampant arsenal nuclear locomotive if k2 loaded
+if (mods["Krastorio2"] or mods["angelsindustries"]) and (mods["RampantArsenal"] or mods["RampantArsenalFork"]) then
+  -- disable rampant arsenal nuclear locomotive if k2 or angelindustries loaded
   data.raw["recipe"]["kr-crush-nuclear-train-vehicle-rampant-arsenal"] = nil
   data.raw["recipe"]["nuclear-train-vehicle-rampant-arsenal"] = nil
+  data.raw["recipe"]["nuclear-train-vehicle-rampant-arsenal-recycling"] = nil
   data.raw["item-with-entity-data"]["nuclear-train-vehicle-rampant-arsenal"] = nil
   data.raw.locomotive["nuclear-train-vehicle-rampant-arsenal"] = nil
   data.raw.technology["rampant-arsenal-technology-nuclear-railway"] = nil
@@ -84,5 +85,6 @@ if mods["Krastorio2"] and (mods["RampantArsenal"] or mods["RampantArsenalFork"])
   -- disable rampant arsenal power armor mk3 if k2 loaded
   data.raw.technology["rampant-arsenal-technology-power-armor-mk3"] = nil
   data.raw["recipe"]["power-armor-mk3-armor-rampant-arsenal"] = nil
+  data.raw["recipe"]["power-armor-mk3-armor-rampant-arsenal-recycling"] = nil
   data.raw["recipe"]["kr-crush-power-armor-mk3-armor-rampant-arsenal"] = nil
 end
